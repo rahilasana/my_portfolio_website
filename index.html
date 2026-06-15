@@ -9,6 +9,7 @@
     <!-- Tailwind CSS CDN -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- Custom Style -->
     <style>
@@ -31,9 +32,9 @@
 <body class="text-white bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950">
 
     <!-- NAVBAR -->
-    <nav
-        class="flex justify-between items-center px-10 py-5 bg-slate-950/60 border-b border-white/10 backdrop-blur-md fixed w-full z-50">
-        <!-- <h1 class="text-2xl font-bold">Rahila Sana</h1> -->
+    <nav class="flex justify-between items-center px-10 py-5 bg-white/5 backdrop-blur-md fixed w-full z-50" >
+        <h1 class="text-2xl font-bold">Rahila Sana</h1>
+
         <h1 class="text-2xl font-bold">My Portfolio</h1>
 
         <ul class="flex gap-6 text-sm">
@@ -600,14 +601,27 @@
             </p>
 
             <!-- Social Links -->
-            <div class="flex justify-center gap-6 mt-6 text-gray-400 text-sm">
+<!-- Social Links -->
+<div class="flex justify-center gap-8 mt-6 text-2xl">
 
-                <a href="https://github.com/rahilasana" class="hover:text-purple-400 transition">GitHub</a>
-                <a href="https://www.linkedin.com/in/rahilasana?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                    class="hover:text-blue-400 transition">LinkedIn</a>
-                <a href="mailto:zaviyarkhan536@gmail.com" class="hover:text-cyan-400 transition">Email</a>
+    <a href="https://github.com/rahilasana"
+        target="_blank"
+        class="text-gray-400 hover:text-white transition duration-300">
+        <i class="fa-brands fa-github"></i>
+    </a>
 
-            </div>
+    <a href="https://www.linkedin.com/in/rahilasana?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        target="_blank"
+        class="text-gray-400 hover:text-blue-400 transition duration-300">
+        <i class="fa-brands fa-linkedin"></i>
+    </a>
+
+    <a href="mailto:zaviyarkhan536@gmail.com"
+        class="text-gray-400 hover:text-cyan-400 transition duration-300">
+        <i class="fa-solid fa-envelope"></i>
+    </a>
+
+</div>
 
             <!-- Divider line feel -->
             <div class="w-32 h-px bg-white/10 mx-auto my-6"></div>
