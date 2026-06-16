@@ -1,30 +1,46 @@
 
-const bars = document.querySelectorAll(".progress");
+document.addEventListener("DOMContentLoaded", () => {
 
-bars.forEach(bar => {
-    bar.style.width = "0";
-    bar.style.transition = "width 1.8s ease";
-});
+  const cards = document.querySelectorAll(".skill-card");
 
-const observer = new IntersectionObserver(entries => {
+  if (!cards.length) return;
+
+  const observer = new IntersectionObserver((entries, obs) => {
+
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.querySelectorAll(".progress").forEach(bar => {
-                bar.style.width = bar.dataset.width;
-            });
-        }
-    });
-}, { threshold: 0.4 });
 
-document.querySelectorAll(".skill-card").forEach(card => {
-    observer.observe(card);
+      if (!entry.isIntersecting) return;
+
+      const bars = entry.target.querySelectorAll(".progress");
+
+      bars.forEach(bar => {
+        bar.style.width = "0";
+        bar.style.transition = "width 1.8s ease";
+
+        // force reflow (this is the missing magic)
+        void bar.offsetWidth;
+
+        bar.style.width = bar.dataset.width;
+      });
+
+      // stop re-trigger (important)
+      obs.unobserve(entry.target);
+
+    });
+
+  }, {
+    threshold: 0.4
+  });
+
+  cards.forEach(card => observer.observe(card));
+
 });
 
 // CV Download button
-const downloadBtn = document.getElementById("downloadBtn");
+const downloadBtn = document.querySelector(".download-btn");
 
 downloadBtn.addEventListener("click", () => {
-    downloadBtn.textContent = "Rahila, CV Downloaded ✅";
+    downloadBtn.textContent = "Rahila, CV Downloaded ";
 
     setTimeout(() => {
         downloadBtn.textContent = "Download CV";
@@ -78,4 +94,11 @@ form.addEventListener("submit", function(e) {
     });
 });
 
-console.log(emailjs);
+// console.log(emailjs);
+
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });

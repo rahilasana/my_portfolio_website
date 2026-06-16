@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="64x64" href="image copy 7.png">
     <title>Rahila Sana - Portfolio</title>
 
     <!-- Tailwind CSS CDN -->
@@ -24,19 +25,34 @@
         #languages {
             border-radius: 90px 10px;
         }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .progress {
+            width: 0%;
+        }
     </style>
 </head>
-
-<!-- <body class="text-white"> -->
 
 <body class="text-white bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950">
 
     <!-- NAVBAR -->
-    <nav class="flex justify-between items-center px-10 py-5 bg-white/5 backdrop-blur-md fixed w-full z-50" >
+    <!-- <nav class="flex justify-between items-center px-10 py-5 shadow shadow-[0_10px_30px_rgba(34,211,238,0.5)] bg-transparent  fixed w-full z-50"> -->
+    <nav
+        class="flex justify-between items-center px-4 md:px-10 py-5 shadow shadow-[0_10px_30px_rgba(34,211,238,0.5)] bg-transparent fixed w-full z-50">
 
         <h1 class="text-2xl font-bold">My Portfolio</h1>
 
-        <ul class="flex gap-6 text-sm">
+        <!-- Hamburger -->
+        <button id="menuBtn" class="md:hidden text-2xl">
+            ☰
+        </button>
+
+        <!-- Menu -->
+        <ul id="menu"
+            class="hidden md:flex gap-6 text-sm flex-col md:flex-row absolute md:static  right-0  top-16 md:w-auto  md:bg-transparent p-5 md:p-0 shadow-2xl ">
             <li><a href="#home" class="hover:text-purple-500">Home</a></li>
             <li><a href="#about" class="hover:text-purple-500">About</a></li>
             <li><a href="#Services" class="hover:text-purple-500">Services</a></li>
@@ -44,12 +60,12 @@
             <li><a href="#projects" class="hover:text-purple-500">Projects</a></li>
             <li><a href="#contact" class="hover:text-purple-500">Contact</a></li>
         </ul>
+
     </nav>
 
     <!-- HERO SECTION -->
-    <section id="home" class="h-screen flex flex-col px-10 pt-20 bg-cover bg-center bg-no-repeat relative"
-        style="background-image:url('')">
-
+    <!-- <section id="home" class="h-screen flex flex-col px-10 pt-20 bg-cover bg-center bg-no-repeat relative"> -->
+    <section id="home" class="min-h-screen flex flex-col px-5 md:px-10 pt-24 bg-cover bg-center bg-no-repeat relative">
         <!-- OVERLAY for clean look -->
         <!-- <div class="absolute inset-0 bg-white/30 backdrop-blur-[2px]"></div> -->
         <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-blue-500/10 to-transparent">
@@ -61,10 +77,10 @@
             <div class="grid md:grid-cols-2 gap-10 items-center max-w-6xl w-full">
 
                 <!-- LEFT SIDE TEXT -->
-                <!-- LEFT SIDE TEXT -->
                 <div class="text-left max-w-xl">
 
-                    <h2 class="text-7xl font-bold text-white leading-tight">
+                    <!-- <h2 class="text-7xl font-bold text-white leading-tight"> -->
+                    <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
                         Hi, I'm <br>
                         <span
                             class="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -72,7 +88,8 @@
                         </span>
                     </h2>
 
-                    <p class="text-3xl mt-4 text-gray-200 font-semibold">
+                    <!-- <p class="text-3xl mt-4 text-gray-200 font-semibold"> -->
+                    <p class="text-xl md:text-2xl lg:text-3xl mt-4 text-gray-200 font-semibold">
                         Full Stack Web Developer
                     </p>
 
@@ -82,10 +99,11 @@
                     </p>
 
                     <!-- BUTTONS -->
-                    <div class="mt-8 flex gap-4">
+                    <!-- <div class="mt-8 flex gap-4"> -->
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
 
                         <a href="RahilaSana-CV.pdf" download
-                            class="px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:scale-105 transition duration-300">
+                            class=" download-btn px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:scale-105 transition duration-300">
                             Download CV
                         </a>
 
@@ -102,7 +120,9 @@
                 <div class="flex justify-center">
                     <div class="relative">
 
-                        <div class="w-[320px] h-[320px] rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                        <!-- <div class="w-[320px] h-[320px] rounded-full overflow-hidden border-4 border-white shadow-2xl"> -->
+                        <div
+                            class="w-[220px] h-[220px] md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px] rounded-full overflow-hidden border-4 border-white shadow-2xl">
                             <img src="image copy 5.png" class="w-full h-full object-cover">
                         </div>
 
@@ -135,7 +155,8 @@
                     ✦ About Me
                 </span>
 
-                <h2 class="text-4xl md:text-6xl font-bold text-white leading-tight">
+                <!-- <h2 class="text-4xl md:text-6xl font-bold text-white leading-tight"> -->
+                <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                     Full Stack
                     <span class="text-purple-500">
                         Web Developer
@@ -167,15 +188,16 @@
 
     </section>
     <!-- Services -->
-    <section id="Services" class="h-screen relative px-6 overflow-hidden bg-cover bg-center flex flex-col"
-        style="background-image:url('')">
+    <!-- <section id="Services" class="h-screen relative px-6 overflow-hidden bg-cover bg-center flex flex-col"style="background-image:url('')"> -->
+    <section id="Services" class="min-h-screen relative px-6 overflow-hidden bg-cover bg-center flex flex-col">
         <h2 class="text-center text-4xl font-bold mt-10 mb-10">Services</h2>
 
         <!-- TOP ROW -->
-        <div class="flex-1 flex justify-evenly items-center">
+        <!-- <div class="flex-1 flex justify-evenly items-center"> -->
+        <div class="flex flex-wrap justify-center gap-6 py-6">
 
             <!-- CARD -->
-            <div class="group relative size-62 border-2 border-blue-600 rounded-b-full
+            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62 border-2 border-blue-600 rounded-b-full
                     flex items-center justify-center text-2xl overflow-hidden
                     transition-all duration-500 hover:-rotate-12 hover:scale-95">
                 <div class=" absolute top-0 left-0 w-full  h-12 bg-cyan-500"></div>
@@ -184,10 +206,14 @@
                         bg-gradient-to-t from-blue-500 to-cyan-400 opacity-80
                         transition-all duration-500 group-hover:h-full"></div>
 
-                <span class="text-sm z-10 group-hover:text-white">Front-End Development</span>
+                <!-- <span class="text-sm z-10 group-hover:text-white">Front-End Development</span> -->
+                <span
+                    class="text-xs sm:text-sm md:text-base lg:text-lg break-words whitespace-normal z-10 group-hover:text-white">
+                    Front-End Development
+                </span>
             </div>
 
-            <div class="group relative size-62 border-2 border-blue-600 rounded-b-full
+            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62 border-2 border-blue-600 rounded-b-full
                     flex items-center justify-center text-2xl overflow-hidden
                     transition-all duration-500 hover:-rotate-12 hover:scale-95">
                 <div class=" absolute top-0 left-0 w-full  h-12 bg-cyan-500"></div>
@@ -196,10 +222,12 @@
                         bg-gradient-to-t from-blue-500 to-cyan-400 opacity-80
                         transition-all duration-500 group-hover:h-full"></div>
 
-                <span class="text-sm  relative z-10 group-hover:text-white">Responsive Web Design</span>
+                <span
+                    class="text-xs sm:text-sm md:text-base lg:text-lg break-words whitespace-normal z-10 group-hover:text-white">
+                    Responsive Web Design</span>
             </div>
 
-            <div class="group relative size-62 border-2 border-blue-600 rounded-b-full
+            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62 border-2 border-blue-600 rounded-b-full
                     flex items-center justify-center text-2xl overflow-hidden
                     transition-all duration-500 hover:-rotate-12 hover:scale-95">
                 <div class=" absolute top-0 left-0 w-full  h-12 bg-cyan-500"></div>
@@ -208,15 +236,20 @@
                         bg-gradient-to-t from-blue-500 to-cyan-400 opacity-80
                         transition-all duration-500 group-hover:h-full"></div>
 
-                <span class="text-sm  relative z-10 group-hover:text-white">Landing Page Development</span>
+                <!-- <span class="text-sm  relative z-10 group-hover:text-white">Landing Page Development</span> -->
+                <span
+                    class="text-xs sm:text-sm md:text-base lg:text-lg break-words whitespace-normal z-10 group-hover:text-white">
+                    Landing Page Design
+                </span>
             </div>
 
         </div>
 
         <!-- BOTTOM ROW -->
-        <div class="flex-1 flex justify-evenly items-center">
+        <!-- <div class="flex-1 flex justify-evenly items-center"> -->
+        <div class="flex flex-wrap justify-center gap-6 py-6">
 
-            <div class="group relative size-62 border-2 border-blue-600 rounded-b-full
+            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62 border-2 border-blue-600 rounded-b-full
                     flex items-center justify-center text-2xl overflow-hidden
                     transition-all duration-500 hover:-rotate-12 hover:scale-95">
                 <div class=" absolute top-0 left-0 w-full  h-12 bg-cyan-500"></div>
@@ -225,10 +258,14 @@
                         bg-gradient-to-t from-purple-500 to-blue-500 opacity-80
                         transition-all duration-500 group-hover:h-full"></div>
 
-                <span class="text-sm  relative z-10 group-hover:text-white">React Web Applications</span>
+                <!-- <span class="text-sm  relative z-10 group-hover:text-white">React Web Applications</span> -->
+                <span
+                    class="text-xs sm:text-sm md:text-base lg:text-lg break-words whitespace-normal z-10 group-hover:text-white">
+                    React Web Applications
+                </span>
             </div>
 
-            <div class="group relative size-62 border-2 border-blue-600 rounded-b-full
+            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62 border-2 border-blue-600 rounded-b-full
                     flex items-center justify-center text-2xl overflow-hidden
                     transition-all duration-500 hover:-rotate-12 hover:scale-95">
                 <div class=" absolute top-0 left-0 w-full  h-12 bg-cyan-500"></div>
@@ -237,10 +274,14 @@
                        bg-gradient-to-t from-purple-500 to-blue-500 opacity-80
                         transition-all duration-500 group-hover:h-full"></div>
 
-                <span class="text-sm relative z-10 group-hover:text-white">UI/UX Implementation</span>
+                <!-- <span class="text-sm relative z-10 group-hover:text-white">UI/UX Implementation</span> -->
+                <span
+                    class="text-xs sm:text-sm md:text-base lg:text-lg break-words whitespace-normal z-10 group-hover:text-white">
+                    UI/UX Implementation
+                </span>
             </div>
 
-            <div class="group relative size-62 border-2 border-blue-600 rounded-b-full
+            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62 border-2 border-blue-600 rounded-b-full
                     flex items-center justify-center text-2xl overflow-hidden
                     transition-all duration-500 hover:-rotate-12 hover:scale-95">
                 <div class=" absolute top-0 left-0 w-full  h-12 bg-cyan-500"></div>
@@ -249,9 +290,10 @@
                        bg-gradient-to-t from-purple-500 to-blue-500 opacity-80
                         transition-all duration-500 group-hover:h-full"></div>
 
-                <span class="text-sm relative z-10 group-hover:text-white text-center">
-                    Website Maintenance
-                    <br>
+                <span
+                    class="text-xs sm:text-sm md:text-base lg:text-lg break-words whitespace-normal z-10 group-hover:text-white">
+                    Maintenance
+                    <!-- <br> -->
                     <span class="block text-center">&</span>
                     Optimization
                 </span>
@@ -267,14 +309,17 @@
 
             <!-- Heading -->
             <div class="text-center mb-14">
-                <h2 class="text-5xl font-bold text-white">My Skills</h2>
+                <!-- <h2 class="text-5xl font-bold text-white"> -->
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                    My Skills</h2>
                 <p class="text-gray-500 mt-4">
                     Technologies and programming languages I use to build modern websites.
                 </p>
             </div>
 
             <!-- Skills Cards -->
-            <div class="grid lg:grid-cols-2 gap-10">
+            <!-- <div class="grid lg:grid-cols-2 gap-10"> -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
 
                 <!-- Technical Skills -->
                 <div id="techSkills" class="skill-card bg-white/5 backdrop-blur-xl text-white p-8  border-4 border-fuchsia-500
@@ -388,7 +433,8 @@
         <div class="max-w-7xl mx-auto">
 
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold">My Projects</h2>
+                <!-- <h2 class="text-5xl font-bold">My Projects</h2> -->
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold">My Projects</h2>
                 <p class="text-gray-400 mt-4">
                     Some projects I have built using modern web technologies.
                 </p>
@@ -399,13 +445,24 @@
                 <!-- Project 1 -->
                 <div
                     class="project-card bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:-translate-y-3 transition-all duration-500 backdrop-blur-md hover:shadow-[0_0_40px_rgba(168,85,247,0.4)]">
-
-                    <div class="grid grid-cols-2 gap-2 p-2">
+                    <!-- <div class="grid grid-cols-2 gap-2 p-2">
                         <img src="image copy 9.png" class="w-full h-24 object-cover rounded-lg">
                         <img src="image copy 10.png" class="w-full h-24 object-cover rounded-lg">
                         <img src="image copy 11.png" class="w-full h-24 object-cover rounded-lg">
                         <img src="image copy 16.png" class="w-full h-24 object-cover rounded-lg">
+                    </div> -->
+
+                    <div class="flex overflow-x-auto snap-x snap-mandatory gap-3 p-2">
+                        <img src="image copy 9.png"
+                            class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
+                        <img src="image copy 10.png"
+                            class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
+                        <img src="image copy 11.png"
+                            class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
+                        <img src="image copy 16.png"
+                            class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
                     </div>
+
                     <div class="p-6">
                         <h3 class="text-2xl font-bold">Portfolio Website</h3>
 
@@ -427,7 +484,8 @@
                             </span>
                         </div>
 
-                        <div class="mt-6 flex gap-4">
+                        <!-- <div class="mt-6 flex gap-4"> -->
+                        <div class="mt-6 flex flex-col sm:flex-row gap-4">
                             <a href="#" class="px-4 py-2 bg-cyan-500 rounded-lg hover:bg-cyan-600">
                                 Live Demo
                             </a>
@@ -443,11 +501,27 @@
                 <div
                     class="project-card bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:-translate-y-3 transition-all duration-500 backdrop-blur-md hover:shadow-[0_0_40px_rgba(168,85,247,0.4)]">
 
-                    <div class="grid grid-cols-2 gap-2 p-2">
+                    <!-- <div class="grid grid-cols-2 gap-2 p-2">
                         <img src="" class="w-full h-24 object-cover rounded-lg">
                         <img src="" class="w-full h-24 object-cover rounded-lg">
                         <img src="" class="w-full h-24 object-cover rounded-lg">
                         <img src="" class="w-full h-24 object-cover rounded-lg">
+                    </div> -->
+
+                    <div class="flex overflow-x-auto snap-x snap-mandatory gap-3 p-2">
+                        <img src="image.png" class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
+                        <img src="image copy 2.png"
+                            class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
+
+                        <!-- Slide 3 (2 IMAGES IN ONE FRAME, 2 COL GRID) -->
+                        <div class="w-full flex-shrink-0 snap-center h-40 grid grid-cols-2 gap-2">
+
+                            <img src="image copy 3.png" class="w-full h-full object-cover rounded-lg">
+
+                            <img src="image copy 4.png" class="w-full h-full object-cover rounded-lg">
+
+                        </div>
+
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold">E-Commerce UI</h3>
@@ -470,7 +544,8 @@
                             </span>
                         </div>
 
-                        <div class="mt-6 flex gap-4">
+                        <!-- <div class="mt-6 flex gap-4"> -->
+                        <div class="mt-6 flex flex-col sm:flex-row gap-4">
                             <a href="#" class="px-4 py-2 bg-cyan-500 rounded-lg hover:bg-cyan-600">
                                 Live Demo
                             </a>
@@ -485,12 +560,21 @@
                 <!-- Project 3 -->
                 <div
                     class="project-card bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:-translate-y-3 transition-all duration-500 backdrop-blur-md hover:shadow-[0_0_40px_rgba(168,85,247,0.4)]">
-
+                    <!-- 
                     <div class="grid grid-cols-2 gap-2 p-2">
                         <img src="image copy 12.png" class="w-full h-24 object-cover rounded-lg">
                         <img src="image copy 13.png" class="w-full h-24 object-cover rounded-lg">
                         <img src="image copy 14.png" class="w-full h-24 object-cover rounded-lg">
                         <img src=" " class="w-full h-24 object-cover rounded-lg">
+                    </div> -->
+                    <div class="flex overflow-x-auto snap-x snap-mandatory gap-3 p-2">
+                        <img src="image copy 12.png"
+                            class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
+                        <img src="image copy 13.png"
+                            class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
+                        <img src="image copy 14.png"
+                            class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
+                        <img src=" " class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold">Employee Management System</h3>
@@ -509,7 +593,8 @@
                             </span>
                         </div>
 
-                        <div class="mt-6 flex gap-4">
+                        <!-- <div class="mt-6 flex gap-4"> -->
+                        <div class="mt-6 flex flex-col sm:flex-row gap-4">
                             <a href="#" class="px-4 py-2 bg-cyan-500 rounded-lg hover:bg-cyan-600">
                                 Live Demo
                             </a>
@@ -532,7 +617,8 @@
 
             <!-- Heading -->
             <div class="text-center mb-14">
-                <h2 class="text-5xl font-bold">Contact Me</h2>
+                <!-- <h2 class="text-5xl font-bold">Contact Me</h2> -->
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold">Contact Me</h2>
                 <p class="text-gray-400 mt-4">
                     Have a project or idea? Let's work together.
                 </p>
@@ -600,27 +686,25 @@
             </p>
 
             <!-- Social Links -->
-<!-- Social Links -->
-<div class="flex justify-center gap-8 mt-6 text-2xl">
+            <!-- <div class="flex justify-center gap-8 mt-6 text-2xl"> -->
+            <div class="flex flex-wrap justify-center gap-8 mt-6 text-2xl">
 
-    <a href="https://github.com/rahilasana"
-        target="_blank"
-        class="text-gray-400 hover:text-white transition duration-300">
-        <i class="fa-brands fa-github"></i>
-    </a>
+                <a href="https://github.com/rahilasana" target="_blank"
+                    class="text-gray-400 hover:text-white transition duration-300">
+                    <i class="fa-brands fa-github"></i>
+                </a>
 
-    <a href="https://www.linkedin.com/in/rahilasana?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-        target="_blank"
-        class="text-gray-400 hover:text-blue-400 transition duration-300">
-        <i class="fa-brands fa-linkedin"></i>
-    </a>
+                <a href="https://www.linkedin.com/in/rahilasana?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
 
-    <a href="mailto:zaviyarkhan536@gmail.com"
-        class="text-gray-400 hover:text-cyan-400 transition duration-300">
-        <i class="fa-solid fa-envelope"></i>
-    </a>
+                <a href="mailto:zaviyarkhan536@gmail.com"
+                    class="text-gray-400 hover:text-cyan-400 transition duration-300">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
 
-</div>
+            </div>
 
             <!-- Divider line feel -->
             <div class="w-32 h-px bg-white/10 mx-auto my-6"></div>
