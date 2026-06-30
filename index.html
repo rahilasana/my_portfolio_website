@@ -206,7 +206,7 @@
     <!-- Services -->
     <!-- <section id="Services" class="h-screen relative px-6 overflow-hidden bg-cover bg-center flex flex-col"style="background-image:url('')"> -->
     <section id="Services"
-        class="min-h-screen relative px-6 overflow-hidden bg-contain  bg-center bg-no-repeat flex flex-col"
+        class=" relative px-6 overflow-hidden bg-cover bg-center bg-no-repeat flex flex-col"
         style="background-image:url('image\ copy\ 6.png')">
         <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-blue-500/10 to-transparent">
         </div>
@@ -272,7 +272,9 @@
         <!-- <div class="flex-1 flex justify-evenly items-center"> -->
         <div class="flex flex-wrap justify-center gap-6 py-6">
 
-            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62 border-2 border-blue-600 rounded-b-full
+            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62
+            backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl
+             border-2 border-blue-600 rounded-b-full
                     flex items-center justify-center text-2xl overflow-hidden
                     transition-all duration-500 hover:-rotate-12 hover:scale-95">
                 <div class=" absolute top-0 left-0 w-full  h-10 bg-cyan-500"></div>
@@ -287,7 +289,9 @@
                 </span>
             </div>
 
-            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62 border-2 border-blue-600 rounded-b-full
+            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62
+            backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl
+             border-2 border-blue-600 rounded-b-full
                     flex items-center justify-center text-2xl overflow-hidden
                     transition-all duration-500 hover:-rotate-12 hover:scale-95">
                 <div class=" absolute top-0 left-0 w-full  h-10 bg-cyan-500"></div>
@@ -302,7 +306,9 @@
                 </span>
             </div>
 
-            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62 border-2 border-blue-600 rounded-b-full
+            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62
+            backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl
+             border-2 border-blue-600 rounded-b-full
                     flex items-center justify-center text-2xl overflow-hidden
                     transition-all duration-500 hover:-rotate-12 hover:scale-95">
                 <div class=" absolute top-0 left-0 w-full  h-10 bg-cyan-500"></div>
@@ -450,7 +456,7 @@
         </div>
     </section>
     <!-- projects -->
-    <section id="projects" class="py-24 px-6 bg-slate-900 text-white bg-cover bg-center"
+    <section id="projects" class="relative py-24 px-6 bg-slate-900 text-white bg-cover bg-center"
         style="background-image: url('')">
         <div class="absolute top-0 left-0 w-52 h-52 bg-cyan-500/20 rounded-full blur-3xl"></div>
         <div class="absolute top-0 right-0 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl"></div>
@@ -519,8 +525,49 @@
                 <div
                     class="project-card bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:-translate-y-3 transition-all duration-500 backdrop-blur-md hover:shadow-[0_0_40px_rgba(168,85,247,0.4)]">
 
+                    <div class="overflow-y-scroll hide-scrollbar flex overflow-x-auto snap-x snap-mandatory gap-3 p-2">
+                        <img src="image copy 12.png"
+                            class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
+                        <img src="image copy 13.png"
+                            class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
+                        <img src="image copy 14.png"
+                            class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
+                        <!-- <img src=" " class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg"> -->
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold">Employee Management System</h3>
+
+                        <p class="text-gray-400 mt-3">
+                            Task management application with CRUD operations and local storage.
+                        </p>
+
+                        <div class="flex gap-2 mt-4 flex-wrap">
+                            <span class="px-3 py-1 bg-green-500/20 rounded-full text-green-300 text-sm">
+                                React Js
+                            </span>
+
+                            <span class="px-3 py-1 bg-blue-500/20 rounded-full text-blue-300 text-sm">
+                                Tailwindcss
+                            </span>
+                        </div>
+
+                        <!-- <div class="mt-6 flex gap-4"> -->
+                        <div class="mt-6 flex flex-col sm:flex-row gap-4">
+                            <a href="#" class="px-4 py-2 bg-cyan-500 rounded-lg hover:bg-cyan-600">
+                                Live Demo
+                            </a>
+
+                            <a href="#" class="px-4 py-2 border border-white/20 rounded-lg hover:bg-white/10">
+                                Github
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
 
+                <!-- Project 3 -->
+                <div
+                    class="project-card bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:-translate-y-3 transition-all duration-500 backdrop-blur-md hover:shadow-[0_0_40px_rgba(168,85,247,0.4)]">
                     <div class="overflow-y-scroll hide-scrollbar flex overflow-x-auto snap-x snap-mandatory gap-3 p-2">
                         <img src="image.png" class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
                         <img src="image copy 2.png"
@@ -570,48 +617,6 @@
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div
-                    class="project-card bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:-translate-y-3 transition-all duration-500 backdrop-blur-md hover:shadow-[0_0_40px_rgba(168,85,247,0.4)]">
-
-                    <div class="overflow-y-scroll hide-scrollbar flex overflow-x-auto snap-x snap-mandatory gap-3 p-2">
-                        <img src="image copy 12.png"
-                            class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
-                        <img src="image copy 13.png"
-                            class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
-                        <img src="image copy 14.png"
-                            class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
-                        <!-- <img src=" " class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg"> -->
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold">Employee Management System</h3>
-
-                        <p class="text-gray-400 mt-3">
-                            Task management application with CRUD operations and local storage.
-                        </p>
-
-                        <div class="flex gap-2 mt-4 flex-wrap">
-                            <span class="px-3 py-1 bg-green-500/20 rounded-full text-green-300 text-sm">
-                                React Js
-                            </span>
-
-                            <span class="px-3 py-1 bg-blue-500/20 rounded-full text-blue-300 text-sm">
-                                Tailwindcss
-                            </span>
-                        </div>
-
-                        <!-- <div class="mt-6 flex gap-4"> -->
-                        <div class="mt-6 flex flex-col sm:flex-row gap-4">
-                            <a href="#" class="px-4 py-2 bg-cyan-500 rounded-lg hover:bg-cyan-600">
-                                Live Demo
-                            </a>
-
-                            <a href="#" class="px-4 py-2 border border-white/20 rounded-lg hover:bg-white/10">
-                                Github
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
@@ -619,9 +624,9 @@
 
     </section>
 
-    <section id="contact" class="py-24 px-6 bg-slate-950 text-white">
+    <section id="contact" class=" relative  px-6 bg-slate-950 text-white pb-8 pt-14">
         <div class="absolute top-0 right-0 w-62 h-62 bg-cyan-500/20 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-62 h-62 bg-purple-500/20 rounded-full blur-3xl"></div>
         <div class="max-w-5xl mx-auto">
 
             <!-- Heading -->
@@ -634,7 +639,7 @@
             </div>
 
             <!-- Form Box -->
-            <div class="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 backdrop-blur-md shadow-xl">
+            <div class="bg-cyan-500/20 border border-white/10 rounded-3xl p-8 md:p-12 backdrop-blur-md shadow-xl ">
 
                 <form id="contactForm" class="space-y-6">
 
@@ -642,7 +647,7 @@
                     <div>
                         <label class="block text-sm text-gray-300 mb-2">Your Name</label>
                         <input type="text" id="name"
-                            class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white outline-none focus:border-cyan-400"
+                            class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white outline-none focus:border-cyan-400 "
                             placeholder="Enter your name">
                     </div>
 
@@ -664,7 +669,7 @@
 
                     <!-- Button -->
                     <button type="submit"
-                        class="w-full py-3 rounded-xl bg-cyan-500 hover:bg-cyan-600 transition font-semibold">
+                        class="w-full py-3 rounded-xl bg-cyan-500/30 hover:bg-cyan-600 transition font-semibold">
                         Send Message
                     </button>
 
