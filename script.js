@@ -1,104 +1,141 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-
   const cards = document.querySelectorAll(".skill-card");
 
   if (!cards.length) return;
 
-  const observer = new IntersectionObserver((entries, obs) => {
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
-    entries.forEach(entry => {
+        const bars = entry.target.querySelectorAll(".progress");
 
-      if (!entry.isIntersecting) return;
+        bars.forEach((bar) => {
+          bar.style.width = "0";
+          bar.style.transition = "width 1.8s ease";
 
-      const bars = entry.target.querySelectorAll(".progress");
+          // force reflow (this is the missing magic)
+          void bar.offsetWidth;
 
-      bars.forEach(bar => {
-        bar.style.width = "0";
-        bar.style.transition = "width 1.8s ease";
+          bar.style.width = bar.dataset.width;
+        });
 
-        // force reflow (this is the missing magic)
-        void bar.offsetWidth;
-
-        bar.style.width = bar.dataset.width;
+        // stop re-trigger (important)
+        obs.unobserve(entry.target);
       });
+    },
+    {
+      threshold: 0.4,
+    },
+  );
 
-      // stop re-trigger (important)
-      obs.unobserve(entry.target);
-
-    });
-
-  }, {
-    threshold: 0.4
-  });
-
-  cards.forEach(card => observer.observe(card));
-
+  cards.forEach((card) => observer.observe(card));
 });
 
 // CV Download button
 const downloadBtn = document.querySelector(".download-btn");
 
 downloadBtn.addEventListener("click", () => {
-    downloadBtn.textContent = "Rahila, CV Downloaded ";
+  downloadBtn.textContent = "Rahila, CV Downloaded ";
 
-    setTimeout(() => {
-        downloadBtn.textContent = "Download CV";
-    }, 3000);
+  setTimeout(() => {
+    downloadBtn.textContent = "Download CV";
+  }, 3000);
 });
 
-
-// ===============================
 // 🚀 EMAILJS CONTACT FORM (FINAL)
-// ===============================
 
 emailjs.init("0ddPZBIYvM0dRFTg2");
 
 const form = document.getElementById("contactForm");
 const successMsg = document.getElementById("successMsg");
 
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill all fields");
-        return;
-    }
+  if (name === "" || email === "" || message === "") {
+    alert("Please fill all fields");
+    return;
+  }
 
-    const params = {
-        name: name,
-        email: email,
-        message: message
-    };
+  const params = {
+    name: name,
+    email: email,
+    message: message,
+  };
 
-    emailjs.send(
-        "service_olstuf4",
-        "template_akt7dit",
-        params
-    )
+  emailjs
+    .send("service_olstuf4", "template_akt7dit", params)
     .then(() => {
-        successMsg.classList.remove("hidden");
-        form.reset();
+      successMsg.classList.remove("hidden");
+      form.reset();
 
-        setTimeout(() => {
-            successMsg.classList.add("hidden");
-        }, 3000);
+      setTimeout(() => {
+        successMsg.classList.add("hidden");
+      }, 3000);
     })
     .catch((error) => {
-        console.log("Error:", error);
-        alert("Message not sent");
+      console.log("Error:", error);
+      alert("Message not sent");
     });
 });
 
 // console.log(emailjs);
 
-  const btn = document.getElementById("menuBtn");
-  const menu = document.getElementById("menu");
+const btn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
 
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+
+//to show next image
+
+document.querySelectorAll(".project-card").forEach((card) => {
+  const slider = card.querySelector(".slider");
+  const slides = slider.children;
+
+  const dots = card.querySelectorAll(".dot");
+  const nextBtn = card.querySelector(".next-btn");
+
+  let current = 0;
+
+  function updateSlider() {
+    slides[current].scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest",
+    });
+
+    dots.forEach((dot) => {
+      dot.classList.remove("bg-cyan-400");
+      dot.classList.add("bg-gray-500");
+    });
+
+    dots[current].classList.remove("bg-gray-500");
+    dots[current].classList.add("bg-cyan-400");
+  }
+
+  nextBtn.addEventListener("click", () => {
+    current++;
+
+    if (current >= slides.length) {
+      current = 0;
+    }
+
+    updateSlider();
   });
+
+
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    current = index;
+
+    updateSlider();
+  });
+});
+});
