@@ -99,7 +99,7 @@ document.querySelectorAll(".project-card").forEach((card) => {
   const slider = card.querySelector(".slider");
   const slides = slider.children;
 
-  const dots = card.querySelectorAll(".dot");
+  const dots = card.querySelectorAll(".pdot");
   const nextBtn = card.querySelector(".next-btn");
 
   let current = 0;
@@ -111,9 +111,9 @@ document.querySelectorAll(".project-card").forEach((card) => {
       block: "nearest",
     });
 
-    dots.forEach((dot) => {
-      dot.classList.remove("bg-cyan-400");
-      dot.classList.add("bg-gray-500");
+    dots.forEach((pdot) => {
+      pdot.classList.remove("bg-cyan-400");
+      pdot.classList.add("bg-gray-500");
     });
 
     dots[current].classList.remove("bg-gray-500");
@@ -131,8 +131,8 @@ document.querySelectorAll(".project-card").forEach((card) => {
   });
 
 
-dots.forEach((dot, index) => {
-  dot.addEventListener("click", () => {
+dots.forEach((pdot, index) => {
+  pdot.addEventListener("click", () => {
     current = index;
 
     updateSlider();

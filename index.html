@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="64x64" href="image copy 7.png">
     <title>Rahila Sana - Portfolio</title>
+    <link rel="stylesheet" href="Aiassistent/ai.css">
 
     <!-- Tailwind CSS CDN -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
@@ -205,124 +206,353 @@
     </section>
     <!-- Services -->
     <!-- <section id="Services" class="h-screen relative px-6 overflow-hidden bg-cover bg-center flex flex-col"style="background-image:url('')"> -->
-    <section id="Services" class=" relative px-6 overflow-hidden bg-cover bg-center bg-no-repeat flex flex-col"
-        style="background-image:url('image\ copy.png')">
-        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-blue-500/10 to-transparent">
-        </div>
-        <h2 class="text-center text-4xl font-bold mt-10 mb-10">Services</h2>
+    <section id="Services" class="relative px-6 py-20 overflow-hidden bg-cover bg-center bg-no-repeat"
+        style="background-image: url('image copy.png');">
 
-        <!-- TOP ROW -->
-        <!-- <div class="flex-1 flex justify-evenly items-center"> -->
-        <div class="flex flex-wrap justify-center gap-6 py-6">
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-blue-500/10 to-transparent"></div>
 
-            <!-- CARD -->
-            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62 
-                    backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl 
-                    rounded-b-full
-                    flex items-center justify-center text-2xl overflow-hidden
-                    transition-all duration-500 hover:-rotate-12 hover:scale-95">
-                <div class=" absolute top-0 left-0 w-full  h-10 bg-cyan-500"></div>
+        <!-- Floating Blur -->
+        <div class="absolute top-20 left-10 w-60 h-60 bg-purple-500/20 blur-3xl rounded-full"></div>
+        <div class="absolute bottom-20 right-10 w-60 h-60 bg-cyan-500/20 blur-3xl rounded-full"></div>
 
-                <div class="absolute bottom-0 left-0 w-full h-0
-                        bg-gradient-to-t from-blue-500 to-cyan-400 opacity-80
-                        transition-all duration-500 group-hover:h-full"></div>
+        <!-- Content -->
+        <div class="relative z-10">
 
-                <span
-                    class="text-xs sm:text-sm md:text-base lg:text-lg break-words whitespace-normal z-10 group-hover:text-white">
-                    Front-End Development
-                </span>
+            <!-- Heading -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold">
+                    My <span class="text-cyan-400">Services</span>
+                </h2>
+
+                <p class="text-gray-300 mt-4 max-w-2xl mx-auto">
+                    Creating modern, responsive and high-performance websites
+                    with clean code and beautiful user experiences.
+                </p>
             </div>
 
-            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62
-            backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl border-2 border-blue-600 rounded-b-full
-                    flex items-center justify-center text-2xl overflow-hidden
-                    transition-all duration-500 hover:-rotate-12 hover:scale-95">
-                <div class=" absolute top-0 left-0 w-full  h-10 bg-cyan-500"></div>
+            <!-- Top Row -->
+            <div class="flex flex-wrap justify-center gap-8">
 
-                <div class="absolute bottom-0 left-0 w-full h-0
-                        bg-gradient-to-t from-blue-500 to-cyan-400 opacity-80
-                        transition-all duration-500 group-hover:h-full"></div>
+                <!-- CARD 1 -->
+                <div class="group relative w-72 h-80
+                backdrop-blur-xl bg-white/5
+                border border-white/10
+                shadow-2xl rounded-[40px]
+                overflow-hidden
+                transition-all duration-500
+                hover:-translate-y-4 hover:scale-105">
 
-                <span
-                    class="text-xs sm:text-sm md:text-base lg:text-lg break-words whitespace-normal z-10 group-hover:text-white">
-                    Responsive Web Design</span>
+                    <!-- Number -->
+                    <span class="absolute top-4 right-5 text-5xl font-bold text-white/10">
+                        01
+                    </span>
+
+                    <!-- Hover Background -->
+                    <div class="absolute bottom-0 left-0 w-full h-0
+                    bg-gradient-to-t from-purple-600 via-blue-600 to-cyan-500
+                    transition-all duration-500 group-hover:h-full">
+                    </div>
+
+                    <div class="relative z-10 p-8 text-center">
+
+                        <!-- Icon -->
+                        <div class="w-16 h-16 mx-auto rounded-full
+                        bg-cyan-500/20 flex items-center justify-center
+                        text-3xl transition duration-500
+                        group-hover:rotate-12">
+                            <i class="fa-solid fa-code text-4xl text-cyan-400 text-4xl text-cyan-400 transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:text-white"></i>
+                        </div>
+
+                        <h3 class="mt-6 text-xl font-bold group-hover:text-white">
+                            Front-End Development
+                        </h3>
+
+                        <p class="mt-4 text-sm text-gray-300 leading-6 group-hover:text-white">
+                            Building modern, responsive and fast websites
+                            using the latest web technologies.
+                        </p>
+
+                        <!-- Skills -->
+                        <div class="flex flex-wrap justify-center gap-2 mt-5">
+                            <span class="px-3 py-1 text-xs rounded-full bg-white/10">HTML</span>
+                            <span class="px-3 py-1 text-xs rounded-full bg-white/10">CSS</span>
+                            <span class="px-3 py-1 text-xs rounded-full bg-white/10">JavaScript</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="group relative w-72 h-80
+                backdrop-blur-xl bg-white/5
+                border border-white/10
+                shadow-2xl rounded-[40px]
+                overflow-hidden
+                transition-all duration-500
+                hover:-translate-y-4 hover:scale-105">
+
+                    <span class="absolute top-4 right-5 text-5xl font-bold text-white/10">
+                        02
+                    </span>
+
+                    <div class="absolute bottom-0 left-0 w-full h-0
+                    bg-gradient-to-t from-purple-600 via-blue-600 to-cyan-500
+                    transition-all duration-500 group-hover:h-full">
+                    </div>
+
+                    <div class="relative z-10 p-8 text-center">
+
+                        <div class="w-16 h-16 mx-auto rounded-full
+                        bg-cyan-500/20 flex items-center justify-center
+                        text-3xl group-hover:rotate-12">
+                            <i class="fa-solid fa-mobile-screen-button text-4xl text-cyan-400 text-4xl text-cyan-400 transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:text-white"></i>
+                        </div>
+
+                        <h3 class="mt-6 text-xl font-bold group-hover:text-white">
+                            Responsive Design
+                        </h3>
+
+                        <p class="mt-4 text-sm text-gray-300 leading-6 group-hover:text-white">
+                            Websites optimized for desktop, tablet
+                            and mobile devices.
+                        </p>
+
+                        <div class="flex flex-wrap justify-center gap-2 mt-5">
+                            <span class="px-3 py-1 text-xs rounded-full bg-white/10">Mobile</span>
+                            <span class="px-3 py-1 text-xs rounded-full bg-white/10">Tablet</span>
+                            <span class="px-3 py-1 text-xs rounded-full bg-white/10">Desktop</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="group relative w-72 h-80
+                backdrop-blur-xl bg-white/5
+                border border-white/10
+                shadow-2xl rounded-[40px]
+                overflow-hidden
+                transition-all duration-500
+                hover:-translate-y-4 hover:scale-105">
+
+                    <span class="absolute top-4 right-5 text-5xl font-bold text-white/10">
+                        03
+                    </span>
+
+                    <div class="absolute bottom-0 left-0 w-full h-0
+                    bg-gradient-to-t from-purple-600 via-blue-600 to-cyan-500
+                    transition-all duration-500 group-hover:h-full">
+                    </div>
+
+                    <div class="relative z-10 p-8 text-center">
+
+                        <div class="w-16 h-16 mx-auto rounded-full
+                        bg-cyan-500/20 flex items-center justify-center
+                        text-3xl group-hover:rotate-12">
+                            <i class="fa-solid fa-rocket text-4xl text-cyan-400 text-4xl text-cyan-400 transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:text-white"></i>
+                        </div>
+
+                        <h3 class="mt-6 text-xl font-bold group-hover:text-white">
+                            Landing Pages
+                        </h3>
+
+                        <p class="mt-4 text-sm text-gray-300 leading-6 group-hover:text-white">
+                            High-converting landing pages focused on
+                            user engagement and growth.
+                        </p>
+
+                        <div class="flex flex-wrap justify-center gap-2 mt-5">
+                            <span class="px-3 py-1 text-xs rounded-full bg-white/10">SEO</span>
+                            <span class="px-3 py-1 text-xs rounded-full bg-white/10">Fast</span>
+                            <span class="px-3 py-1 text-xs rounded-full bg-white/10">Modern</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- Bottom Row -->
+            <div class="flex flex-wrap justify-center gap-8 mt-10">
+
+                <!-- CARD 4 -->
+                <div class="group relative w-72 h-80
+                backdrop-blur-xl bg-white/5
+                border border-white/10
+                shadow-2xl rounded-[40px]
+                overflow-hidden
+                transition-all duration-500
+                hover:-translate-y-4 hover:scale-105">
+
+                    <span class="absolute top-4 right-5 text-5xl font-bold text-white/10">
+                        04
+                    </span>
+
+                    <div class="absolute bottom-0 left-0 w-full h-0
+                    bg-gradient-to-t from-purple-600 via-blue-600 to-cyan-500
+                    transition-all duration-500 group-hover:h-full">
+                    </div>
+
+                    <div class="relative z-10 p-8 text-center">
+
+                        <div class="w-16 h-16 mx-auto rounded-full
+                        bg-cyan-500/20 flex items-center justify-center
+                        text-3xl transition duration-500
+                        group-hover:rotate-12">
+                            <i class="fa-brands fa-react text-4xl text-cyan-400 text-4xl text-cyan-400 transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:text-white"></i>
+                        </div>
+
+                        <h3 class="mt-6 text-xl font-bold group-hover:text-white">
+                            React Applications
+                        </h3>
+
+                        <p class="mt-4 text-sm text-gray-300 leading-6 group-hover:text-white">
+                            Interactive single-page applications with reusable
+                            components and modern React architecture.
+                        </p>
+
+                        <div class="flex flex-wrap justify-center gap-2 mt-5">
+                            <span class="px-3 py-1 rounded-full bg-white/10 text-xs">React</span>
+                            <span class="px-3 py-1 rounded-full bg-white/10 text-xs">Hooks</span>
+                            <span class="px-3 py-1 rounded-full bg-white/10 text-xs">Vite</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 5 -->
+
+                <div class="group relative w-72 h-80
+                backdrop-blur-xl bg-white/5
+                border border-white/10
+                shadow-2xl rounded-[40px]
+                overflow-hidden
+                transition-all duration-500
+                hover:-translate-y-4 hover:scale-105">
+
+                    <span class="absolute top-4 right-5 text-5xl font-bold text-white/10">
+                        05
+                    </span>
+
+                    <div class="absolute bottom-0 left-0 w-full h-0
+                    bg-gradient-to-t from-purple-600 via-blue-600 to-cyan-500
+                    transition-all duration-500 group-hover:h-full">
+                    </div>
+
+                    <div class="relative z-10 p-8 text-center">
+
+                        <div class="w-16 h-16 mx-auto rounded-full
+                        bg-cyan-500/20 flex items-center justify-center
+                        text-3xl transition duration-500
+                        group-hover:rotate-12">
+                            <i class="fa-solid fa-palette text-4xl text-cyan-400 text-4xl text-cyan-400 transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:text-white"></i>
+                        </div>
+
+                        <h3 class="mt-6 text-xl font-bold group-hover:text-white">
+                            UI / UX Implementation
+                        </h3>
+
+                        <p class="mt-4 text-sm text-gray-300 leading-6 group-hover:text-white">
+                            Transforming Figma designs into clean,
+                            responsive and pixel-perfect websites.
+                        </p>
+
+                        <div class="flex flex-wrap justify-center gap-2 mt-5">
+                            <span class="px-3 py-1 rounded-full bg-white/10 text-xs">Figma</span>
+                            <span class="px-3 py-1 rounded-full bg-white/10 text-xs">Tailwind</span>
+                            <span class="px-3 py-1 rounded-full bg-white/10 text-xs">Responsive</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 6 -->
+
+                <div class="group relative w-72 h-80
+                backdrop-blur-xl bg-white/5
+                border border-white/10
+                shadow-2xl rounded-[40px]
+                overflow-hidden
+                transition-all duration-500
+                hover:-translate-y-4 hover:scale-105">
+
+                    <span class="absolute top-4 right-5 text-5xl font-bold text-white/10">
+                        06
+                    </span>
+
+                    <div class="absolute bottom-0 left-0 w-full h-0
+                    bg-gradient-to-t from-purple-600 via-blue-600 to-cyan-500
+                    transition-all duration-500 group-hover:h-full">
+                    </div>
+
+                    <div class="relative z-10 p-8 text-center">
+
+                        <div class="w-16 h-16 mx-auto rounded-full
+                        bg-cyan-500/20 flex items-center justify-center
+                        text-3xl transition duration-500
+                        group-hover:rotate-12">
+                            <i class="fa-solid fa-gauge-high text-4xl text-cyan-400 text-4xl text-cyan-400 transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:text-white"></i>
+                        </div>
+
+                        <h3 class="mt-6 text-xl font-bold group-hover:text-white">
+                            Website Optimization
+                        </h3>
+
+                        <p class="mt-4 text-sm text-gray-300 leading-6 group-hover:text-white">
+                            Speed optimization, bug fixing,
+                            maintenance and performance improvements.
+                        </p>
+
+                        <div class="flex flex-wrap justify-center gap-2 mt-5">
+                            <span class="px-3 py-1 rounded-full bg-white/10 text-xs">Speed</span>
+                            <span class="px-3 py-1 rounded-full bg-white/10 text-xs">SEO</span>
+                            <span class="px-3 py-1 rounded-full bg-white/10 text-xs">Support</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62
-            backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl  border-2 border-blue-600 rounded-b-full
-                    flex items-center justify-center text-2xl overflow-hidden
-                    transition-all duration-500 hover:-rotate-12 hover:scale-95">
-                <div class=" absolute top-0 left-0 w-full  h-10 bg-cyan-500"></div>
+            <!-- CTA -->
 
-                <div class="absolute bottom-0 left-0 w-full h-0
-                        bg-gradient-to-t from-blue-500 to-cyan-400 opacity-80
-                        transition-all duration-500 group-hover:h-full"></div>
+            <div class="mt-24">
 
-                <!-- <span class="text-sm  relative z-10 group-hover:text-white">Landing Page Development</span> -->
-                <span
-                    class="text-xs sm:text-sm md:text-base lg:text-lg break-words whitespace-normal z-10 group-hover:text-white">
-                    Landing Page Design
-                </span>
-            </div>
+                <div class="max-w-5xl mx-auto
+                rounded-[35px]
+                backdrop-blur-xl
+                bg-white/5
+                border border-white/10
+                p-10 text-center">
 
-        </div>
+                    <h3 class="text-3xl font-bold">
+                        Have a Project in Mind?
+                    </h3>
 
-        <!-- BOTTOM ROW -->
-        <!-- <div class="flex-1 flex justify-evenly items-center"> -->
-        <div class="flex flex-wrap justify-center gap-6 py-6">
+                    <p class="text-gray-300 mt-4 max-w-2xl mx-auto leading-7">
+                        Whether you need a responsive website, React application,
+                        or a modern landing page, I'm ready to transform your ideas
+                        into a fast, beautiful and user-friendly digital experience.
+                    </p>
 
-            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62
-            backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl
-             border-2 border-blue-600 rounded-b-full
-                    flex items-center justify-center text-2xl overflow-hidden
-                    transition-all duration-500 hover:-rotate-12 hover:scale-95">
-                <div class=" absolute top-0 left-0 w-full  h-10 bg-cyan-500"></div>
+                    <a href="#contact" class="inline-block mt-8
+                    px-8 py-4
+                    rounded-full
+                    bg-gradient-to-r from-cyan-500 to-purple-600
+                    hover:scale-105
+                    transition
+                    duration-300
+                    font-semibold">
 
-                <div class="absolute bottom-0 left-0 w-full h-0
-                        bg-gradient-to-t from-purple-500 to-blue-500 opacity-80
-                        transition-all duration-500 group-hover:h-full"></div>
+                        Let's Work Together →
 
-                <span
-                    class="text-xs sm:text-sm md:text-base lg:text-lg break-words whitespace-normal z-10 group-hover:text-white">
-                    React Web Applications
-                </span>
-            </div>
+                    </a>
 
-            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62
-            backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl
-             border-2 border-blue-600 rounded-b-full
-                    flex items-center justify-center text-2xl overflow-hidden
-                    transition-all duration-500 hover:-rotate-12 hover:scale-95">
-                <div class=" absolute top-0 left-0 w-full  h-10 bg-cyan-500"></div>
+                </div>
 
-                <div class="absolute bottom-0 left-0 w-full h-0
-                       bg-gradient-to-t from-purple-500 to-blue-500 opacity-80
-                        transition-all duration-500 group-hover:h-full"></div>
-
-                <span
-                    class="text-xs sm:text-sm md:text-base lg:text-lg break-words whitespace-normal z-10 group-hover:text-white">
-                    UI/UX Implementation
-                </span>
-            </div>
-
-            <div class="group relative w-40 h-40 md:w-52 md:h-52 lg:size-62
-            backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl
-             border-2 border-blue-600 rounded-b-full
-                    flex items-center justify-center text-2xl overflow-hidden
-                    transition-all duration-500 hover:-rotate-12 hover:scale-95">
-                <div class=" absolute top-0 left-0 w-full  h-10 bg-cyan-500"></div>
-
-                <div class="absolute bottom-0 left-0 w-full h-0
-                       bg-gradient-to-t from-purple-500 to-blue-500 opacity-80
-                        transition-all duration-500 group-hover:h-full"></div>
-
-                <span
-                    class="text-xs sm:text-sm md:text-base lg:text-lg break-words whitespace-normal z-10 group-hover:text-white">
-                    Maintenance
-                    <!-- <br> -->
-                    <span class="block text-center">&</span>
-                    Optimization
-                </span>
             </div>
 
         </div>
@@ -475,7 +705,8 @@
                 <div
                     class="project-card bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:-translate-y-3 transition-all duration-500 backdrop-blur-md hover:shadow-[0_0_40px_rgba(168,85,247,0.4)]">
 
-                    <div class=" slider overflow-y-scroll hide-scrollbar flex overflow-x-auto snap-x snap-mandatory gap-3 p-2">
+                    <div
+                        class=" slider overflow-y-scroll hide-scrollbar flex overflow-x-auto snap-x snap-mandatory gap-3 p-2">
                         <img src="image copy 9.png"
                             class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
                         <img src="image copy 10.png"
@@ -490,10 +721,10 @@
 
                         <!-- Dots -->
                         <div class=" dots flex gap-2 mt-3 ">
-                            <span class="dot w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
-                            <span class="dot w-2.5 h-2.5 rounded-full bg-gray-500"></span>
-                            <span class="dot w-2.5 h-2.5 rounded-full bg-gray-500"></span>
-                            <span class="dot w-2.5 h-2.5 rounded-full bg-gray-500"></span>
+                            <span class="pdot w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+                            <span class="pdot w-2.5 h-2.5 rounded-full bg-gray-500"></span>
+                            <span class="pdot w-2.5 h-2.5 rounded-full bg-gray-500"></span>
+                            <span class="pdot w-2.5 h-2.5 rounded-full bg-gray-500"></span>
 
                         </div>
 
@@ -543,7 +774,8 @@
                 <div
                     class="project-card bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:-translate-y-3 transition-all duration-500 backdrop-blur-md hover:shadow-[0_0_40px_rgba(168,85,247,0.4)]">
 
-                    <div class=" slider overflow-y-scroll hide-scrollbar flex overflow-x-auto snap-x snap-mandatory gap-3 p-2">
+                    <div
+                        class=" slider overflow-y-scroll hide-scrollbar flex overflow-x-auto snap-x snap-mandatory gap-3 p-2">
                         <img src="image copy 12.png"
                             class="w-full flex-shrink-0 snap-center h-40 object-cover rounded-lg">
                         <img src="image copy 13.png"
@@ -557,9 +789,9 @@
 
                         <!-- Dots -->
                         <div class="dots flex gap-2 mt-3 ">
-                            <span class="dot w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
-                            <span class="dot w-2.5 h-2.5 rounded-full bg-gray-500"></span>
-                            <span class="dot w-2.5 h-2.5 rounded-full bg-gray-500"></span>
+                            <span class="pdot w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+                            <span class="pdot w-2.5 h-2.5 rounded-full bg-gray-500"></span>
+                            <span class="pdot w-2.5 h-2.5 rounded-full bg-gray-500"></span>
                         </div>
 
                         <!-- Next Arrow -->
@@ -625,9 +857,9 @@
 
                         <!-- Dots -->
                         <div class="dots flex gap-2 mt-3 ">
-                            <span class="dot w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
-                            <span class="dot w-2.5 h-2.5 rounded-full bg-gray-500"></span>
-                            <span class="dot w-2.5 h-2.5 rounded-full bg-gray-500"></span>
+                            <span class="pdot w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+                            <span class="pdot w-2.5 h-2.5 rounded-full bg-gray-500"></span>
+                            <span class="pdot w-2.5 h-2.5 rounded-full bg-gray-500"></span>
                         </div>
 
                         <!-- Next Arrow -->
@@ -786,9 +1018,163 @@
 
     </footer>
 
+    <!-- ================= AI Assistant ================= -->
 
+    <button id="chatBtn"
+        class="fixed bottom-6 right-6 w-16 h-16 rounded-full bg-violet-600 hover:bg-violet-700 text-white shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 z-50">
+
+        <i class="fa-solid fa-robot text-2xl"></i>
+
+    </button>
+    <!-- ================= Chat Window ================= -->
+
+    <div id="chatWindow" class="hidden fixed bottom-24 right-6 w-[95vw] max-w-[400px] h-[80vh] max-h-[650px]
+flex flex-col
+rounded-3xl bg-slate-900 border border-slate-700
+shadow-2xl overflow-hidden z-50">
+
+        <!-- Header -->
+
+        <div class="bg-gradient-to-r from-violet-700 to-blue-600 p-5 flex justify-between items-center">
+
+            <div class="flex items-center gap-3">
+
+                <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
+
+                    <i class="fa-solid fa-robot text-white text-xl"></i>
+
+                </div>
+
+                <div>
+
+                    <h2 class="text-white font-bold">
+                        Rahila Sana's AI
+                    </h2>
+
+                    <p class="text-green-300 text-sm">
+                        ● Online
+                    </p>
+
+                </div>
+
+            </div>
+
+            <button id="closeBtn">
+
+                <i class="fa-solid fa-xmark text-white text-xl"></i>
+
+            </button>
+
+        </div>
+        <!-- ================= Messages ================= -->
+
+        <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-900">
+
+            <!-- Welcome Message -->
+
+            <div class="flex items-start gap-3">
+
+                <div class="w-10 h-10 rounded-full bg-violet-600 flex items-center justify-center flex-shrink-0">
+
+                    <i class="fa-solid fa-robot text-white"></i>
+
+                </div>
+
+                <div class="bg-slate-800 text-white p-4 rounded-2xl rounded-tl-sm max-w-[80%]">
+
+                    <p class="text-sm leading-7">
+
+                        👋 Hello!
+
+                        <br><br>
+
+                        I'm <strong>Rahila's AI Assistant.</strong>
+
+                        <br><br>
+
+                        Ask me anything about Rahila's skills,
+                        projects or experience.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Typing Indicator -->
+
+            <div id="typingIndicator" class="hidden flex items-center gap-3">
+
+                <div class="w-10 h-10 rounded-full bg-violet-600 flex items-center justify-center">
+
+                    <i class="fa-solid fa-robot text-white"></i>
+
+                </div>
+
+                <div class="bg-slate-800 px-4 py-3 rounded-2xl flex gap-1">
+
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="px-4 py-3 border-t border-slate-700 flex flex-wrap gap-2 bg-slate-900">
+
+            <button
+                class="questionBtn bg-slate-800 hover:bg-violet-600 text-white px-3 py-2 rounded-full text-sm transition">
+
+                About Me
+
+            </button>
+
+            <button
+                class="questionBtn bg-slate-800 hover:bg-violet-600 text-white px-3 py-2 rounded-full text-sm transition">
+
+                Skills
+
+            </button>
+
+            <button
+                class="questionBtn bg-slate-800 hover:bg-violet-600 text-white px-3 py-2 rounded-full text-sm transition">
+
+                Projects
+
+            </button>
+
+            <button
+                class="questionBtn bg-slate-800 hover:bg-violet-600 text-white px-3 py-2 rounded-full text-sm transition">
+
+                Contact
+
+            </button>
+
+        </div>
+        <div class="bg-slate-900 p-4 border-t border-slate-700">
+            <div class="flex gap-2">
+
+                <input id="userInput" type="text" placeholder="Ask anything..."
+                    class="flex-1 bg-slate-800 rounded-full px-5 py-3 text-white outline-none placeholder:text-slate-400">
+
+                <button id="sendBtn" class="w-12 h-12 rounded-full bg-violet-600 hover:bg-violet-700 transition">
+
+                    <i class="fa-solid fa-paper-plane text-white"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"> </script>
+    <!-- <script src="Aiassistent/data.js"></script> -->
+    <!-- <script src="Aiassistent/ai.js"></script> -->
 </body>
 
 </html>
